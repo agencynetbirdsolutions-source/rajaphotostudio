@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raja Photo Studio – Chat on WhatsApp</title>
+<meta name="description" content="Raja Photo Studio – passport photos, wedding photography, portrait shoots and high quality photo printing. Chat with us on WhatsApp.">
+<style>
+:root{--y:#ffc400;--y2:#ff9d00;--g:#25d366;--bg:#050a18;--card:#0d1428;--t:#f5f7ff;--m:#9ea8c7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif;background:var(--bg);color:var(--t);overflow-x:hidden;line-height:1.6}
+.wrap{max-width:520px;margin:0 auto}
+.banner{display:block;position:relative;overflow:hidden}
+.banner img{width:100%;display:block;animation:zoom 8s ease-in-out infinite alternate}
+.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,196,0,.22) 50%,transparent 60%);transform:translateX(-100%);animation:shine 4s infinite}
+@keyframes zoom{to{transform:scale(1.05)}}
+@keyframes shine{to{transform:translateX(100%)}}
+section{padding:46px 20px}
+h2{font-size:26px;text-align:center;margin-bottom:6px}
+h2 span{background:linear-gradient(90deg,var(--y),var(--y2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{text-align:center;color:var(--m);margin-bottom:26px;font-size:15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:var(--card);border:1px solid #1e2a4a;border-radius:18px;padding:20px 14px;text-align:center;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:var(--y);box-shadow:0 10px 30px rgba(255,196,0,.22)}
+.card .i{font-size:34px;display:block;margin-bottom:8px;animation:float 3s ease-in-out infinite}
+.card:nth-child(even) .i{animation-delay:1s}
+.card h3{font-size:16px;margin-bottom:4px}
+.card p{font-size:13px;color:var(--m)}
+@keyframes float{50%{transform:translateY(-7px)}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.stats div{background:linear-gradient(160deg,#131c36,#0a1020);border:1px solid #1e2a4a;border-radius:16px;padding:18px 6px}
+.stats b{display:block;font-size:20px;color:var(--y)}
+.stats small{color:var(--m);font-size:12px}
+.why{list-style:none}
+.why li{background:var(--card);border-left:4px solid var(--y);border-radius:12px;padding:14px 16px;margin-bottom:12px;font-size:15px}
+.why li b{color:var(--y)}
+.step{display:flex;gap:14px;align-items:center;background:var(--card);border-radius:14px;padding:14px;margin-bottom:12px;border:1px solid #1e2a4a}
+.step em{flex:none;width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--y),var(--y2));display:grid;place-items:center;font-style:normal;font-weight:700;color:#000}
+details{background:var(--card);border:1px solid #1e2a4a;border-radius:14px;padding:14px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--y);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--m);font-size:14px;margin-top:10px}
+.cta{text-align:center;background:radial-gradient(circle at 50% 0,#3a2c00,transparent 70%)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--y2),var(--y));color:#111;text-decoration:none;font-weight:800;font-size:19px;padding:16px 32px;border-radius:60px;animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,196,0,.7)}70%{box-shadow:0 0 0 22px rgba(255,196,0,0)}100%{box-shadow:0 0 0 0 rgba(255,196,0,0)}}
+@keyframes pulseg{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.legal{margin-top:26px;font-size:12px;color:var(--m)}
+.legal a{color:var(--m);margin:0 6px}
+.fab{position:fixed;right:16px;bottom:18px;width:60px;height:60px;border-radius:50%;background:var(--g);display:grid;place-items:center;z-index:50;box-shadow:0 6px 20px rgba(0,0,0,.6);animation:pulseg 1.8s infinite,bob 2.5s ease-in-out infinite}
+.fab svg{width:34px;height:34px;fill:#fff}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.rv{opacity:0;transform:translateY(30px);transition:.7s}
+.rv.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="banner" href="https://api.whatsapp.com/send/?phone=15554703730&amp;text=Please+share+your+services&amp;type=phone_number&amp;app_absent=0" aria-label="Chat on WhatsApp">
+  <img src="raja.png" alt="Raja Photo Studio – Capture Your Special Moments – Chat on WhatsApp">
+</a>
+
+<section>
+  <h2>Our <span>Services</span></h2>
+  <p class="sub">Capture your special moments with us</p>
+  <div class="grid">
+    <div class="card rv"><span class="i">📷</span><h3>Passport Photo</h3><p>Quick, clear photos for your documents</p></div>
+    <div class="card rv"><span class="i">💍</span><h3>Wedding Photography</h3><p>Beautiful memories of your big day</p></div>
+    <div class="card rv"><span class="i">🧑‍🎨</span><h3>Portrait Shoots</h3><p>Professional portraits that look natural</p></div>
+    <div class="card rv"><span class="i">🖨️</span><h3>Photo Printing</h3><p>Sharp, high quality prints</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="stats rv">
+    <div><b>High Quality</b><small>Prints</small></div>
+    <div><b>Quick</b><small>Service</small></div>
+    <div><b>Trusted</b><small>Local Studio</small></div>
+  </div>
+</section>
+
+<section>
+  <h2>Why <span>Raja Photo Studio?</span></h2>
+  <p class="sub">What you can expect from us</p>
+  <ul class="why">
+    <li class="rv"><b>🏅 High Quality Prints</b> – Clear, vivid prints you will be happy to keep.</li>
+    <li class="rv"><b>⚡ Quick Service</b> – We value your time and work fast.</li>
+    <li class="rv"><b>🛡️ Trusted Local Studio</b> – A studio people in your area rely on.</li>
+    <li class="rv"><b>💬 Easy to Reach</b> – Just send us a message on WhatsApp.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>How It <span>Works</span></h2>
+  <p class="sub">Just 3 simple steps</p>
+  <div class="step rv"><em>1</em><div>Tap the "Chat on WhatsApp" button</div></div>
+  <div class="step rv"><em>2</em><div>Tell us what you need</div></div>
+  <div class="step rv"><em>3</em><div>Get the details and plan your visit</div></div>
+</section>
+
+<section>
+  <h2>Frequently Asked <span>Questions</span></h2>
+  <p class="sub">&nbsp;</p>
+  <details class="rv"><summary>Which services do you offer?</summary><p>We offer passport photos, wedding photography, portrait shoots and photo printing.</p></details>
+  <details class="rv"><summary>How can I get the details?</summary><p>Tap the "Chat on WhatsApp" button and send us a message. We will share the information with you.</p></details>
+  <details class="rv"><summary>Can I book a wedding or portrait shoot on WhatsApp?</summary><p>Yes. Message us with your requirement and date, and our team will guide you on the next steps.</p></details>
+  <details class="rv"><summary>Do you print photos too?</summary><p>Yes, we provide high quality photo printing. Message us to know more.</p></details>
+</section>
+
+<section class="cta">
+  <h2>Let's Capture <span>Your Moments</span></h2>
+  <p class="sub">Message us now and get all the details</p>
+  <a class="btn" href="https://api.whatsapp.com/send/?phone=15554703730&amp;text=Please+share+your+services&amp;type=phone_number&amp;app_absent=0">💬 Chat on WhatsApp</a>
+  <p class="legal"><a href="privacy-policy.html">Privacy Policy</a>|<a href="terms-and-conditions.html">Terms &amp; Conditions</a></p>
+</section>
+
+</div>
+
+<a class="fab" href="https://api.whatsapp.com/send/?phone=15554703730&amp;text=Please+share+your+services&amp;type=phone_number&amp;app_absent=0" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.3.6 4.4 1.7 6.3L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.3 1.1 1.1-4.2-.3-.4a10.300 10.300 0 1 1 9 5.100zm5.700-7.700c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.2-.2.300-.8 1-.9 1.200-.2.200-.3.200-.6.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6l.5-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.500 3.100 1.200 3.100.8 3.600.8.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+</script>
+</body>
+</html>
