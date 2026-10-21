@@ -1,168 +1,584 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#080b12">
-  <title>Raja Photo Studio | Photography & Photo Services</title>
-  <meta name="description" content="Explore Raja Photo Studio photography and photo services. Contact us on WhatsApp for service details, pricing and bookings.">
-  <meta name="robots" content="index,follow">
-  <style>
-    :root{color-scheme:dark;--bg:#080b12;--panel:#111827;--panel2:#0d1420;--text:#f8fafc;--muted:#b6c2d3;--gold:#f4c76b;--blue:#66c7ff;--line:rgba(255,255,255,.12);--green:#25d366}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:12px}
-    body{margin:0;background:radial-gradient(ellipse at 50% 0%,#18243b 0%,var(--bg) 48%);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--text);line-height:1.6;overflow-x:hidden}
-    a{color:inherit}
-    .banner{display:block;position:relative;width:100%;height:auto;margin:0;padding:0;overflow:hidden;background:#05070b;line-height:0;text-decoration:none;isolation:isolate}
-    .banner img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;background:#05070b}
-    .banner:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.17) 48%,transparent 60%);transform:translateX(-120%);animation:shine 5.5s ease-in-out infinite}
-    .banner.image-missing{min-height:45vh;display:grid;place-items:center;color:#f8fafc;font:700 16px system-ui;text-align:center;padding:24px}
-    .banner.image-missing:before{content:"Image not found — upload raja247.jpg beside index.html";line-height:1.5}
-    .banner-glow{height:4px;background:linear-gradient(90deg,transparent,var(--blue),var(--gold),var(--blue),transparent);background-size:220% 100%;animation:glow 4s linear infinite;box-shadow:0 0 22px rgba(102,199,255,.4)}
-    .wrap{width:min(100% - 28px,880px);margin-inline:auto}
-    .intro{text-align:center;padding:30px 0 10px}
-    .eyebrow{display:inline-block;color:var(--gold);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin-bottom:8px}
-    h1{font-size:clamp(1.8rem,7vw,3.2rem);line-height:1.1;letter-spacing:-.04em;margin:0 0 12px}
-    .gradient{background:linear-gradient(90deg,#fff,var(--gold),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .intro p,.section-lead{color:var(--muted);max-width:650px;margin:0 auto;font-size:1rem}
-    .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:22px 0 6px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid var(--line);transition:transform .2s ease,box-shadow .2s ease}
-    .btn:active{transform:scale(.98)}
-    .btn-primary{background:linear-gradient(135deg,#20b95c,var(--green));color:#03150a;border-color:transparent;box-shadow:0 8px 26px rgba(37,211,102,.18)}
-    .btn-secondary{background:rgba(255,255,255,.04)}
-    section.content-section{padding:34px 0}
-    .section-head{text-align:center;margin-bottom:22px}
-    h2{font-size:clamp(1.45rem,5vw,2.15rem);line-height:1.2;margin:0 0 9px;letter-spacing:-.025em}
-    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .card{background:linear-gradient(150deg,rgba(255,255,255,.065),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:18px;padding:18px 15px;min-width:0;transition:transform .25s ease,border-color .25s ease,background .25s ease}
-    .card:hover{transform:translateY(-3px);border-color:rgba(244,199,107,.55);background:linear-gradient(150deg,rgba(244,199,107,.09),rgba(255,255,255,.025))}
-    .card .icon{font-size:1.8rem;display:block;margin-bottom:7px}
-    h3{font-size:1rem;margin:0 0 6px}
-    .card p{font-size:.9rem;color:var(--muted);margin:0}
-    .process{display:grid;gap:10px}
-    .step{display:flex;gap:14px;align-items:flex-start;padding:15px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:15px}
-    .num{flex:0 0 34px;height:34px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--gold),#e99e38);color:#16100a;font-weight:900}
-    .step p{margin:3px 0 0;color:var(--muted);font-size:.92rem}
-    .legal-box{background:rgba(17,24,39,.86);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:12px 0}
-    details{padding:0}
-    summary{list-style:none;cursor:pointer;padding:17px 18px;font-weight:800;display:flex;align-items:center;justify-content:space-between;gap:12px}
-    summary::-webkit-details-marker{display:none}
-    summary:after{content:"+";font-size:1.4rem;color:var(--gold);line-height:1}
-    details[open] summary:after{content:"−"}
-    .legal-copy{padding:0 18px 18px;color:var(--muted);font-size:.91rem}
-    .legal-copy p{margin:0 0 12px}
-    .legal-copy ul{padding-left:20px;margin:8px 0 12px}
-    .legal-copy li{margin:5px 0}
-    .small-note{color:#93a2b8;font-size:.8rem;text-align:center;margin:14px 0 28px}
-    .floating-wa{position:fixed;z-index:20;right:16px;bottom:max(16px,env(safe-area-inset-bottom));width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;box-shadow:0 8px 26px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.45);animation:waPulse 2.4s infinite;text-decoration:none}
-    .floating-wa svg{width:31px;height:31px;fill:currentColor}
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
-    .reveal.visible{opacity:1;transform:none}
-    @keyframes shine{0%,25%{transform:translateX(-120%)}65%,100%{transform:translateX(120%)}}
-    @keyframes glow{to{background-position:220% 0}}
-    @keyframes waPulse{0%{box-shadow:0 8px 26px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.42)}70%{box-shadow:0 8px 26px rgba(0,0,0,.45),0 0 0 13px rgba(37,211,102,0)}100%{box-shadow:0 8px 26px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,0)}}
-    @media(min-width:680px){.wrap{width:min(100% - 44px,880px)}.banner{height:auto}.banner img{height:auto;max-height:none}.cards{grid-template-columns:repeat(4,minmax(0,1fr))}.intro{padding-top:42px}.content-section{padding-block:44px!important}}
-    /* On phones, make the banner the complete first screen. No heading, nav, or footer appears above it. */
-    @media(max-width:679px){html,body{margin:0;padding:0}.banner{height:100svh;height:100dvh;min-height:100vh;display:flex;align-items:center;justify-content:center}.banner img{width:100%;height:100%;max-height:none;object-fit:contain;object-position:center}.banner-glow{height:3px}}
-    @media(max-width:380px){.wrap{width:calc(100% - 22px)}.cards{gap:9px}.card{padding:14px 11px}.card p{font-size:.84rem}.btn{width:100%}.actions{padding-inline:8px}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
-  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-44M26DB9ZH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-44M26DB9ZH');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KRCQKHW5');</script>
+<!-- End Google Tag Manager -->
+<title>Raja Photo Studio – Photography Services</title>
+<meta name="description" content="Raja Photo Studio offers professional photography for weddings, pre-wedding shoots, portraits, products, businesses and events. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --paper:#F4F3EF;
+  --ink:#12141A;
+  --ink-soft:#4A4F5C;
+  --cobalt:#2447F5;
+  --cobalt-deep:#1631B8;
+  --sun:#FFC93C;
+  --line:#D9D7CF;
+  --wa:#25D366;
+  --display:'Bricolage Grotesque','Arial Black',Arial,sans-serif;
+  --body:'Hind','Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom,0px)}
+img,svg{max-width:100%}
+a{color:var(--cobalt)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* ===== FULL-SCREEN PHONE BANNER (landing par aate hi poori screen) ===== */
+.screen-banner{position:relative;width:100%;height:100vh;height:100dvh;min-height:420px;overflow:hidden;background:#000;isolation:isolate;animation:bannerIn .8s ease both}
+.sb-bg{position:absolute;inset:-30px;background-size:cover;background-position:center;filter:blur(26px) brightness(.75);z-index:0}
+.sb-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;z-index:1;display:block}
+.sb-link{position:absolute;inset:0;z-index:2;display:block}
+.sb-fallback{display:none;position:absolute;inset:0;z-index:1;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#fff;background:linear-gradient(160deg,var(--cobalt-deep),var(--cobalt))}
+.sb-fallback strong{font-family:var(--display);font-size:clamp(34px,11vw,60px);line-height:1.05}
+.sb-fallback span{margin-top:10px;color:#E4E9FF}
+.screen-banner.no-img .sb-fallback{display:flex}
+.screen-banner.no-img .sb-bg{display:none}
+.sb-controls{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;padding:56px 16px calc(14px + env(safe-area-inset-bottom,0px));background:linear-gradient(to top,rgba(10,12,18,.82),rgba(10,12,18,0));pointer-events:none}
+.sb-controls a{pointer-events:auto}
+.sb-controls .btn-wa{min-height:54px;width:min(100%,380px)}
+.scroll-hint{position:absolute;left:50%;bottom:calc(10px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:3;width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.45);display:grid;place-items:center;text-decoration:none}
+.scroll-hint svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.5;animation:bob 1.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@keyframes bannerIn{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+
+/* ===== header ===== */
+.site-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+.brand svg{width:30px;height:30px;flex:none}
+.head-cta{font-weight:600;font-size:15px;color:#fff;background:var(--ink);padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+
+/* ===== hero ===== */
+.hero{padding:16px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(36px,10vw,68px);line-height:1.03;letter-spacing:-.025em;margin:0 0 16px}
+h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%);padding:0 .08em}
+.lead{color:var(--ink-soft);font-size:clamp(17px,4.4vw,20px);max-width:34ch;margin:0 0 26px}
+.btn-wa{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:14px 28px;border-radius:999px;background:var(--wa);color:#04210F;font-weight:600;font-size:18px;text-decoration:none;width:100%;max-width:380px;animation:ring 2.4s ease-out infinite;transition:transform .15s}
+.btn-wa svg{width:26px;height:26px;fill:#04210F;flex:none}
+.btn-wa:active{transform:scale(.97)}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.hero-note{font-size:14px;color:var(--ink-soft);margin:14px 0 0}
+
+/* viewfinder + aperture */
+.finder{position:relative;width:min(88vw,400px);margin:0 auto;aspect-ratio:1/1;background:var(--ink);border-radius:20px;display:grid;place-items:center;overflow:hidden}
+.finder::before,.finder::after{content:"";position:absolute;width:34px;height:34px;border:3px solid var(--sun);pointer-events:none;z-index:2}
+.finder::before{top:14px;left:14px;border-right:0;border-bottom:0}
+.finder::after{bottom:14px;right:14px;border-left:0;border-top:0}
+.finder .c2,.finder .c3{position:absolute;width:34px;height:34px;border:3px solid var(--sun);z-index:2}
+.finder .c2{top:14px;right:14px;border-left:0;border-bottom:0}
+.finder .c3{bottom:14px;left:14px;border-right:0;border-top:0}
+.rec{position:absolute;top:20px;left:0;right:0;text-align:center;z-index:2;font-size:13px;color:#fff;display:flex;gap:8px;align-items:center;justify-content:center}
+.rec i{width:9px;height:9px;border-radius:50%;background:#FF3B3B;animation:blink 1.1s steps(2,jump-none) infinite}
+@keyframes blink{50%{opacity:.15}}
+#iris{width:86%;height:86%;display:block}
+.ring-rot{transform-origin:200px 200px;animation:spin 40s linear infinite}
+.blades{transform-origin:200px 200px;animation:open 5s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes open{0%,100%{transform:rotate(0deg) scale(1)}50%{transform:rotate(28deg) scale(.82)}}
+.lens{transform-origin:200px 200px;animation:glint 5s ease-in-out infinite}
+@keyframes glint{0%,100%{transform:scale(.9);opacity:.85}50%{transform:scale(1.12);opacity:1}}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:3;pointer-events:none;animation:flash 5s ease-in-out infinite}
+@keyframes flash{0%,46%,56%,100%{opacity:0}50%{opacity:.75}}
+
+
+/* ===== BIG HIGHLIGHTS ===== */
+.big{display:grid;grid-template-columns:1fr;gap:0}
+.big-item{padding:34px 20px;text-align:center;border-bottom:4px solid var(--ink)}
+.big-item:last-child{border-bottom:0}
+.big-item .num{display:block;font-family:var(--display);font-weight:800;font-size:clamp(68px,22vw,150px);line-height:.95;letter-spacing:-.04em}
+.big-item .cap{display:block;font-family:var(--display);font-weight:700;font-size:clamp(22px,6.4vw,38px);line-height:1.1;margin-top:8px}
+.big-item .sub{display:block;font-size:clamp(15px,4vw,18px);margin-top:8px;opacity:.85}
+.b1{background:var(--sun);color:var(--ink)}
+.b2{background:var(--cobalt);color:#fff}
+.b3{background:var(--ink);color:#fff}
+.b3 .num{color:var(--sun)}
+.b1 .num{animation:pop 2.4s ease-in-out infinite}
+.b2 .num{animation:pop 2.4s ease-in-out .8s infinite}
+.b3 .num{animation:pop 2.4s ease-in-out 1.6s infinite}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.big-cta{background:var(--paper);padding:24px 20px;display:flex;justify-content:center}
+@media (min-width:760px){
+  .big{grid-template-columns:repeat(3,1fr)}
+  .big-item{border-bottom:0;border-right:4px solid var(--ink);padding:56px 24px}
+  .big-item:last-child{border-right:0}
+}
+
+/* ===== film strip marquee ===== */
+.strip{background:var(--ink);color:#fff;overflow:hidden;position:relative;padding:22px 0;border-block:6px solid var(--ink)}
+.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:6px;background:radial-gradient(circle,var(--paper) 2px,transparent 2.5px) 0 0/18px 6px repeat-x}
+.strip::before{top:0}.strip::after{bottom:0}
+.track{display:flex;gap:46px;width:max-content;animation:slide 26s linear infinite;font-family:var(--display);font-weight:700;font-size:clamp(20px,5vw,28px);white-space:nowrap}
+.track span::after{content:"✦";color:var(--sun);margin-left:46px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ===== sections ===== */
+.sec{padding:56px 0}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,7vw,44px);line-height:1.08;letter-spacing:-.02em;margin:0 0 10px}
+.sec-sub{color:var(--ink-soft);margin:0 0 30px;max-width:50ch}
+
+.svc{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.svc li{display:grid;grid-template-columns:1fr;gap:4px;padding:22px 0;border-bottom:1px solid var(--line)}
+.svc h3{margin:0;font-family:var(--display);font-size:24px;letter-spacing:-.01em}
+.svc p{margin:0;color:var(--ink-soft)}
+.svc a{font-weight:600;font-size:15px;margin-top:4px}
+
+.why{background:var(--cobalt);color:#fff}
+.why h2{color:#fff}
+.why .sec-sub{color:#DCE3FF}
+.why-list{display:grid;gap:22px;grid-template-columns:1fr;margin:0;padding:0;list-style:none}
+.why-list li{border-left:4px solid var(--sun);padding-left:16px}
+.why-list b{display:block;font-family:var(--display);font-size:21px;margin-bottom:2px}
+.why-list span{color:#E4E9FF}
+
+.steps{display:grid;gap:20px;grid-template-columns:1fr;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-left:64px;min-height:48px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--sun);display:grid;place-items:center;font-family:var(--display);font-size:22px;font-weight:800}
+.steps h3{margin:0 0 2px;font-family:var(--display);font-size:20px}
+.steps p{margin:0;color:var(--ink-soft)}
+
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details:first-of-type{border-top:2px solid var(--ink)}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:32px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;color:var(--cobalt);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:10px 0 0;color:var(--ink-soft)}
+
+.cta-band{background:var(--ink);color:#fff;border-radius:22px;padding:30px 22px;display:grid;gap:18px}
+.cta-band h2{color:#fff;margin:0}
+.cta-band p{margin:0;color:#C9CCD6}
+
+.disclaimer{border:1px dashed #9A98A0;border-radius:14px;padding:16px 18px;color:var(--ink-soft);font-size:14.5px}
+footer{padding:36px 0 110px;margin-top:44px;border-top:2px solid var(--ink);color:var(--ink-soft);font-size:15px}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0 0 14px;padding:0;list-style:none}
+.foot-links a{color:var(--ink);font-weight:500}
+
+/* floating whatsapp */
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;gap:10px;background:var(--wa);color:#04210F;text-decoration:none;padding:0 20px 0 16px;height:58px;border-radius:999px;font-weight:600;font-size:17px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:ring 2.4s ease-out infinite}
+.fab svg{width:30px;height:30px;fill:#04210F}
+.fab{transition:opacity .3s,transform .3s}
+.fab.hide{opacity:0;transform:translateY(20px);pointer-events:none}
+
+/* policy pages */
+.policy{display:none;position:fixed;inset:0;z-index:100;background:var(--paper);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(20px + env(safe-area-inset-top,0px)) 0 calc(60px + env(safe-area-inset-bottom,0px))}
+.policy:target{display:block}
+.policy .wrap{max-width:760px}
+.policy h2{margin-top:10px}
+.policy h3{font-family:var(--display);font-size:20px;margin:28px 0 6px}
+.policy p,.policy li{font-size:16.5px;color:#2B2F3A}
+.policy ul{padding-left:22px}
+.back{display:inline-block;font-weight:600;text-decoration:none;padding:10px 0}
+.updated{color:var(--ink-soft);font-size:14px}
+
+@media (min-width:760px){
+  .hero{padding:32px 0 76px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:48px}
+  .svc li{grid-template-columns:1.1fr 2fr auto;align-items:center;gap:20px}
+  .svc a{margin:0}
+  .why-list{grid-template-columns:repeat(2,1fr);gap:28px}
+  .steps{grid-template-columns:repeat(3,1fr);gap:28px}
+  .cta-band{grid-template-columns:1.4fr auto;align-items:center;padding:38px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;scroll-behavior:auto!important}
+}
+</style>
 </head>
-<body>
-  <!-- The banner is intentionally the first visible element: no header or top spacing. -->
-  <a class="banner" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" aria-label="Contact Raja Photo Studio on WhatsApp">
-    <img src="raja247.jpg" alt="Raja Photo Studio banner" fetchpriority="high" decoding="sync">
-  </a>
-  <div class="banner-glow" aria-hidden="true"></div>
+<body id="top">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRCQKHW5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-  <main class="wrap">
-    <section class="intro reveal">
-      <span class="eyebrow">Moments worth keeping</span>
-      <h1>Welcome to <span class="gradient">Raja Photo Studio</span></h1>
-      <p>Photography and photo services for your important moments. Message us to ask about available services, pricing, delivery timelines and bookings.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94">💬 Chat on WhatsApp</a>
-        <a class="btn btn-secondary" href="#services">Explore Services ↓</a>
+<!-- ===== PHONE BANNER: page khulte hi POORI SCREEN par dikhega, tap karne par WhatsApp khulega =====
+     Image ka naam: raja247.jpg  (isi folder mein index.html ke saath rakhein) -->
+<section class="screen-banner" id="topBanner">
+  <div class="sb-bg" style="background-image:url('raja247.jpg')"></div>
+  <img class="sb-img" src="raja247.jpg" alt="Raja Photo Studio" onerror="this.style.display='none'">
+  <a class="sb-link" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"></a>
+  <a class="scroll-hint" href="#home" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></a>
+</section>
+
+<header id="home">
+  <div class="wrap site-head">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#12141A"/><circle cx="16" cy="16" r="9" fill="none" stroke="#FFC93C" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="#2447F5"/></svg>
+      Raja Photo Studio
+    </a>
+    <a class="head-cta" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener">Get Offer</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Aapke khaas pal, <em>ek perfect frame</em> mein</h1>
+        <p class="lead">Wedding, pre-wedding, portrait, product aur events ki professional photography. Booking sirf WhatsApp par.</p>
+        <a class="btn-wa" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <p class="hero-note">12% discount · 24/7 support · Instant offer. Pricing pehle hi bata di jati hai.</p>
       </div>
-    </section>
 
-    <section class="content-section" id="services">
-      <div class="section-head reveal"><h2>Our <span class="gradient">Services</span></h2><p class="section-lead">Tell us what you need and we’ll share the relevant details directly.</p></div>
-      <div class="cards">
-        <article class="card reveal"><span class="icon" aria-hidden="true">📸</span><h3>Portrait Photography</h3><p>Personal portraits and profile photographs for different occasions.</p></article>
-        <article class="card reveal"><span class="icon" aria-hidden="true">💍</span><h3>Wedding & Events</h3><p>Ask about photography coverage for celebrations and special events.</p></article>
-        <article class="card reveal"><span class="icon" aria-hidden="true">🪪</span><h3>Passport & ID Photos</h3><p>Photo requirements and formats can be confirmed before your visit.</p></article>
-        <article class="card reveal"><span class="icon" aria-hidden="true">🖼️</span><h3>Photo Printing</h3><p>Enquire about print sizes, finishes and available options.</p></article>
-        <article class="card reveal"><span class="icon" aria-hidden="true">🎓</span><h3>Portfolio Photos</h3><p>Discuss portrait and portfolio requirements for your purpose.</p></article>
-        <article class="card reveal"><span class="icon" aria-hidden="true">🎉</span><h3>Family & Celebrations</h3><p>Ask about capturing family gatherings and memorable occasions.</p></article>
-        <article class="card reveal"><span class="icon" aria-hidden="true">🛍️</span><h3>Product Photos</h3><p>Enquire about photographs for products, catalogues and business use.</p></article>
-        <article class="card reveal"><span class="icon" aria-hidden="true">✨</span><h3>Custom Requests</h3><p>Have a different photography requirement? Send us a message.</p></article>
+      <div class="finder" aria-hidden="true">
+        <span class="c2"></span><span class="c3"></span>
+        <div class="rec"><i></i> LIVE</div>
+        <svg id="iris" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="190" fill="none" stroke="#FFC93C" stroke-width="2"/>
+          <g class="ring-rot" id="ticks"></g>
+          <circle cx="200" cy="200" r="150" fill="#1B1F29" stroke="#2A2F3D" stroke-width="2"/>
+          <g class="blades" id="blades"></g>
+          <g class="lens">
+            <circle cx="200" cy="200" r="46" fill="#2447F5"/>
+            <circle cx="200" cy="200" r="30" fill="#12141A"/>
+            <circle cx="188" cy="188" r="9" fill="#fff" opacity=".85"/>
+          </g>
+        </svg>
+        <div class="flash"></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="content-section" id="booking">
-      <div class="section-head reveal"><h2>How to <span class="gradient">Enquire</span></h2><p class="section-lead">A simple way to get information before confirming a service.</p></div>
-      <div class="process">
-        <div class="step reveal"><span class="num">1</span><div><h3>Send a WhatsApp message</h3><p>Tell us which photography or photo service you are looking for.</p></div></div>
-        <div class="step reveal"><span class="num">2</span><div><h3>Confirm the details</h3><p>Ask about availability, pricing, requirements and expected timelines.</p></div></div>
-        <div class="step reveal"><span class="num">3</span><div><h3>Confirm before proceeding</h3><p>We’ll discuss the next steps with you. A booking is confirmed only after details are agreed.</p></div></div>
+  <section class="big-wrap" aria-label="Our offers">
+    <div class="big">
+      <div class="big-item b1"><span class="num" id="n12">12%</span><span class="cap">Discount</span><span class="sub">Apni booking par seedha 12% off</span></div>
+      <div class="big-item b2"><span class="num">24/7</span><span class="cap">Support</span><span class="sub">Din ho ya raat, WhatsApp par hum hazir hain</span></div>
+      <div class="big-item b3"><span class="num">Instant</span><span class="cap">Get Your Offer</span><span class="sub">Message karein aur offer turant paayein</span></div>
+    </div>
+    <div class="big-cta"><a class="btn-wa" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Get Your Offer Now</a></div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <div class="track" id="track">
+      <span>Wedding</span><span>Pre-Wedding</span><span>Portrait</span><span>Product Shoots</span><span>Business &amp; Corporate</span><span>Events &amp; Parties</span>
+      <span>Wedding</span><span>Pre-Wedding</span><span>Portrait</span><span>Product Shoots</span><span>Business &amp; Corporate</span><span>Events &amp; Parties</span>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <h2>Hamari photography services</h2>
+      <p class="sec-sub">Har shoot aapki zarurat ke hisaab se plan hota hai.</p>
+      <ul class="svc">
+        <li><h3>Wedding photography</h3><p>Rasmein, rishte aur emotions, sab kuch natural aur sundar frames mein.</p><a href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener">Ask on WhatsApp</a></li>
+        <li><h3>Pre-wedding shoots</h3><p>Aapki story ko dikhane wale outdoor aur indoor couple shoots.</p><a href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener">Ask on WhatsApp</a></li>
+        <li><h3>Portrait &amp; fashion</h3><p>Personal portfolio, profile photos aur stylish portraits.</p><a href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener">Ask on WhatsApp</a></li>
+        <li><h3>Product &amp; business</h3><p>Online store, catalogue aur brand ke liye clean product photos.</p><a href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener">Ask on WhatsApp</a></li>
+        <li><h3>Events &amp; parties</h3><p>Birthday, engagement, corporate event ya koi bhi celebration.</p><a href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener">Ask on WhatsApp</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec why">
+    <div class="wrap">
+      <h2>Hum kyun?</h2>
+      <p class="sec-sub">Seedha, saaf aur professional kaam.</p>
+      <ul class="why-list">
+        <li><b>Professional equipment</b><span>Acchi quality camera aur lighting ke saath shoot.</span></li>
+        <li><b>Transparent pricing</b><span>Booking se pehle package aur rate saaf bata diye jate hain.</span></li>
+        <li><b>Time par delivery</b><span>Edited photos tay samay par aap tak pahunchti hain.</span></li>
+        <li><b>WhatsApp par aasaan booking</b><span>Koi lamba form nahi, seedhi baat aur jaldi jawab.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <h2>Booking 3 steps mein</h2>
+      <p class="sec-sub">Chat se shoot tak ka simple raasta.</p>
+      <ol class="steps">
+        <li><h3>WhatsApp par message karein</h3><p>Button dabayein aur apni zarurat batayein.</p></li>
+        <li><h3>Date aur package tay karein</h3><p>Rate, location aur timing par baat hoti hai.</p></li>
+        <li><h3>Shoot aur delivery</h3><p>Shoot ke baad edited photos aap ko di jati hain.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Apna shoot aaj hi book karein</h2>
+          <p>Date aur location bataiye, hum aapko rate aur available slots bhej denge.</p>
+        </div>
+        <a class="btn-wa" style="max-width:none" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener">Book on WhatsApp</a>
       </div>
-      <div class="actions"><a class="btn btn-primary" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94">💬 Message Raja Photo Studio</a></div>
-    </section>
+    </div>
+  </section>
 
-    <section class="content-section" id="faq">
-      <div class="section-head reveal"><h2>Frequently Asked <span class="gradient">Questions</span></h2></div>
-      <div class="legal-box reveal"><details><summary>How can I ask about a service?</summary><div class="legal-copy"><p>Use any WhatsApp link on this page and tell us the service you need. Please confirm availability and details with us directly.</p></div></details></div>
-      <div class="legal-box reveal"><details><summary>Where can I check prices and timelines?</summary><div class="legal-copy"><p>Prices, availability, delivery timelines and any specific requirements should be confirmed directly with Raja Photo Studio before placing an order.</p></div></details></div>
-      <div class="legal-box reveal"><details><summary>Is my booking automatically confirmed by sending a message?</summary><div class="legal-copy"><p>No. Sending a WhatsApp message is an enquiry. Wait for confirmation of the agreed service, price and timing.</p></div></details></div>
-    </section>
+  <section class="sec" style="padding-top:8px">
+    <div class="wrap">
+      <h2>Aksar pooche jaane wale sawal</h2>
+      <p class="sec-sub">&nbsp;</p>
+      <details>
+        <summary>Booking kaise hoti hai?</summary>
+        <p>WhatsApp par message karein, date aur package tay hone ke baad advance payment se booking confirm hoti hai.</p>
+      </details>
+      <details>
+        <summary>12% discount kaise milega?</summary>
+        <p>WhatsApp par message karke offer maangein. Booking confirm hone par 12% discount aapke package ke rate par lagu ho jata hai.</p>
+      </details>
+      <details>
+        <summary>Rate kitne hote hain?</summary>
+        <p>Rate shoot ke type, duration aur location par depend karte hain. Booking se pehle WhatsApp par poora rate bata diya jata hai.</p>
+      </details>
+      <details>
+        <summary>Photos kab tak milengi?</summary>
+        <p>Delivery ka samay package ke hisaab se alag hota hai aur booking ke waqt pehle hi bata diya jata hai.</p>
+      </details>
+      <details>
+        <summary>Cancel ya reschedule karna ho to?</summary>
+        <p>Cancellation aur rescheduling ke rules hamari <a href="#terms-refund">Refund Policy</a> mein diye gaye hain.</p>
+      </details>
+      <details>
+        <summary>Meri details aur photos safe hain?</summary>
+        <p>Haan. Aapki jaankari sirf service dene ke liye use hoti hai. Poori details <a href="#privacy">Privacy Policy</a> mein hain.</p>
+      </details>
+    </div>
+  </section>
 
-    <section class="content-section" id="privacy">
-      <div class="section-head reveal"><h2>Privacy <span class="gradient">Policy</span></h2><p class="section-lead">Last updated: 21 October 2026</p></div>
-      <div class="legal-box reveal"><details open><summary>Read our Privacy Policy</summary><div class="legal-copy">
-        <p><strong>1. About this policy.</strong> This policy explains how Raja Photo Studio may handle information when you visit this website or contact us. Please update this policy if the studio’s actual practices change.</p>
-        <p><strong>2. Information you provide.</strong> If you contact us through WhatsApp, we may receive your phone number, profile details visible to us, messages, and any photographs or other information you choose to send. Please do not send information that is not needed for your enquiry.</p>
-        <p><strong>3. Website information.</strong> The website may process basic technical information such as browser/device details and page requests through hosting or security services. This page does not intentionally request payment-card details or create a website account.</p>
-        <p><strong>4. How information may be used.</strong> Information may be used to reply to enquiries, discuss requested photography services, coordinate a booking, provide customer support, protect the website from misuse, and meet applicable legal obligations.</p>
-        <p><strong>5. WhatsApp and third-party services.</strong> WhatsApp is operated by a third party and its own terms and privacy policy apply when you use it. We do not control how that service processes information. This website should only add analytics, advertising pixels, cookies or other tracking tools if they are actually used and this policy is updated to explain them.</p>
-        <p><strong>6. Sharing and retention.</strong> We do not claim to sell your personal information. Information may be shared with service providers when reasonably needed to operate the service, or when required by law. We retain information only for as long as reasonably necessary for the purpose, recordkeeping or legal obligations.</p>
-        <p><strong>7. Security.</strong> Reasonable steps should be taken to protect information, but no internet transmission or storage method can be guaranteed completely secure.</p>
-        <p><strong>8. Your choices and requests.</strong> You can choose what information to send. To ask about, correct or request deletion of information held by the studio, contact us using the WhatsApp link below. Applicable legal and operational requirements may limit deletion.</p>
-        <p><strong>9. Children.</strong> A parent or guardian should contact us on behalf of a child where appropriate and should avoid sharing unnecessary personal information.</p>
-        <p><strong>10. Policy updates.</strong> This policy may be updated when our services or data practices change. The latest update date will be shown here.</p>
-        <p><strong>Contact:</strong> <a href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94">Message Raja Photo Studio on WhatsApp</a>.</p>
-      </div></details></div>
-    </section>
+  <section class="sec" style="padding-top:8px">
+    <div class="wrap">
+      <div class="disclaimer">
+        <strong>Note:</strong> Photo style, final edit look aur delivery time shoot ke type, location aur conditions par depend karte hain. Sabhi services Raja Photo Studio ke Terms &amp; Conditions ke under di jati hain.
+      </div>
+    </div>
+  </section>
+</main>
 
-    <section class="content-section" id="terms">
-      <div class="section-head reveal"><h2>Terms &amp; <span class="gradient">Conditions</span></h2><p class="section-lead">Last updated: 21 October 2026</p></div>
-      <div class="legal-box reveal"><details><summary>Read our Terms &amp; Conditions</summary><div class="legal-copy">
-        <p><strong>1. Website use.</strong> By using this website, you agree to use it lawfully and not to interfere with its operation or attempt unauthorized access.</p>
-        <p><strong>2. Service enquiries.</strong> Website content is general information about possible photography and photo services. Services, formats, availability, prices and delivery timelines must be confirmed directly before an order is accepted.</p>
-        <p><strong>3. Bookings and payments.</strong> A WhatsApp enquiry alone is not a confirmed booking. Any applicable advance, payment method, cancellation terms and delivery schedule should be clearly agreed before payment or service begins. Do not treat an amount or offer as applicable unless it has been confirmed by the studio.</p>
-        <p><strong>4. Customer-provided material.</strong> You are responsible for having the necessary rights and permissions to share photographs, logos or other material with us. Do not send content that unlawfully violates another person’s privacy or intellectual-property rights.</p>
-        <p><strong>5. Images and examples.</strong> Images, examples or descriptions on this website are illustrative unless explicitly stated otherwise. The final deliverable depends on the service agreed with the studio.</p>
-        <p><strong>6. Third-party links.</strong> This website links to WhatsApp for communication. Third-party services are governed by their own terms and policies, and we are not responsible for their independent operation.</p>
-        <p><strong>7. Availability and website accuracy.</strong> We aim to keep website information useful and current, but cannot guarantee uninterrupted access or that every detail is always error-free. Please confirm important details directly.</p>
-        <p><strong>8. Liability.</strong> To the extent permitted by applicable law, the website is provided for general information without a guarantee that it will always be available or error-free. Nothing in these terms excludes rights or liabilities that cannot legally be excluded.</p>
-        <p><strong>9. Changes.</strong> These terms may be updated when needed. Continued use after an update means you should review the current version.</p>
-        <p><strong>10. Applicable law.</strong> These terms are subject to applicable laws of India. Any dispute will be handled by a competent forum as provided by applicable law.</p>
-        <p><strong>Contact:</strong> <a href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94">Message Raja Photo Studio on WhatsApp</a>.</p>
-      </div></details></div>
-      <p class="small-note">Please verify that this policy accurately reflects your actual business, data collection, cookies, analytics and booking practices before publishing.</p>
-    </section>
-  </main>
+<footer>
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="#privacy">Privacy Policy</a></li>
+      <li><a href="#terms">Terms &amp; Conditions</a></li>
+      <li><a href="#terms-refund">Refund &amp; Cancellation</a></li>
+    </ul>
+    <p>Raja Photo Studio · [Your business address, City, State, PIN]<br>
+    Email: support@yourdomain.com · WhatsApp: +91 92863 53220</p>
+    <p>&copy; <span id="yr">2026</span> Raja Photo Studio. All rights reserved.</p>
+  </div>
+</footer>
 
-  <a class="floating-wa" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" aria-label="Chat with Raja Photo Studio on WhatsApp">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.9 3 3.2 8.7 3.2 15.7c0 2.3.6 4.5 1.8 6.4L3 29l7.1-1.9c1.8 1 3.8 1.5 5.9 1.5 7.1 0 12.8-5.7 12.8-12.8C28.8 8.7 23.1 3 16 3zm0 23c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.2 1.1 1.1-4.1-.3-.4a10.3 10.3 0 1 1 9 5zm5.7-7.7c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1-1.3-.5-2.5-1.5c-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5s0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1 2.1 3.3 5.2 4.5 3.1 1.2 3.6.8c.6-.1 1.9-.8 2.1-1.5s.3-1.4.2-1.5-.3-.2-.6-.4z"/></svg>
-  </a>
-  <script>
-    (function(){
-      var items=document.querySelectorAll('.reveal');
-      if(!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('visible')});return;}
-      var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.12});
-      items.forEach(function(el,i){el.style.transitionDelay=(i%4)*65+'ms';observer.observe(el)});
-    })();
-  </script>
+<a class="fab" href="https://wa.me/919286353220?text=Now%20%F0%9F%86%94" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  Chat
+</a>
+
+<!-- ===== PRIVACY POLICY ===== -->
+<section class="policy" id="privacy" aria-label="Privacy Policy">
+  <div class="wrap">
+    <a class="back" href="#top">&larr; Back to home</a>
+    <h2>Privacy Policy</h2>
+    <p class="updated">Last updated: October 14, 2026</p>
+    <p>Raja Photo Studio ("we", "us") provides photography services. This policy explains what information we collect when you visit this website or contact us on WhatsApp, how we use it and what choices you have.</p>
+
+    <h3>1. Information we collect</h3>
+    <ul>
+      <li>Contact details you share, such as your name, phone number (including your WhatsApp number) and email.</li>
+      <li>Booking details such as event type, date, location and your requirements.</li>
+      <li>Photos, videos and files that you send us or that we capture during a shoot for you.</li>
+      <li>Messages you send us on WhatsApp.</li>
+      <li>Basic technical data such as device type, browser, pages viewed and approximate location, collected through cookies and similar technologies.</li>
+    </ul>
+
+    <h3>2. How we use your information</h3>
+    <ul>
+      <li>To respond to your enquiries, confirm bookings and deliver your photographs.</li>
+      <li>To provide customer support and handle payments and refunds.</li>
+      <li>To improve our website, services and advertising performance.</li>
+      <li>To comply with legal obligations and prevent misuse.</li>
+    </ul>
+
+    <h3>3. Use of photographs</h3>
+    <p>Photographs we take for you are used to deliver the service. We will not publish identifiable photographs of you or your family in our portfolio, website, social media or advertising without your permission. You may withdraw permission at any time by writing to us.</p>
+
+    <h3>4. Cookies, analytics and advertising</h3>
+    <p>We may use cookies and similar technologies, including those from Google, to measure website traffic, understand how our ads perform and show relevant ads to people who have visited our site. Third-party vendors, including Google, use cookies to serve ads based on your past visits. You can opt out of personalised advertising through Google Ads Settings (adssettings.google.com) or your browser's cookie settings.</p>
+
+    <h3>5. WhatsApp</h3>
+    <p>When you tap our WhatsApp button you leave this website and chat through WhatsApp, which is operated by Meta and governed by its own terms and privacy policy. Please do not share sensitive information such as bank passwords, card numbers or OTPs with us in chat.</p>
+
+    <h3>6. Sharing of information</h3>
+    <p>We do not sell your personal information. We share it only with trusted service providers who help us operate (for example payment, storage, analytics or messaging services), or when required by law.</p>
+
+    <h3>7. Data retention and security</h3>
+    <p>We keep your information and delivered files only as long as needed to provide the service, handle support requests or meet legal requirements. We take reasonable steps to protect your data, but no method of storage or transmission is completely secure.</p>
+
+    <h3>8. Your choices</h3>
+    <p>You can ask us to access, correct or delete the personal information we hold about you, or stop contacting you, by writing to the email below. We will respond within a reasonable time.</p>
+
+    <h3>9. Children</h3>
+    <p>Our website is meant for adults. Where we photograph minors, we do so only with the consent of a parent or guardian.</p>
+
+    <h3>10. Changes to this policy</h3>
+    <p>We may update this policy from time to time. The latest version will always be on this page with the updated date.</p>
+
+    <h3>11. Contact us</h3>
+    <p>Raja Photo Studio<br>[Your business address, City, State, PIN]<br>Email: support@yourdomain.com<br>WhatsApp: +91 92863 53220</p>
+    <a class="back" href="#top">&larr; Back to home</a>
+  </div>
+</section>
+
+<!-- ===== TERMS & CONDITIONS ===== -->
+<section class="policy" id="terms" aria-label="Terms and Conditions">
+  <div class="wrap">
+    <a class="back" href="#top">&larr; Back to home</a>
+    <h2>Terms &amp; Conditions</h2>
+    <p class="updated">Last updated: October 14, 2026</p>
+    <p>By using this website or booking a service with Raja Photo Studio, you agree to these terms. If you do not agree, please do not use our services.</p>
+
+    <h3>1. Our services</h3>
+    <p>We provide photography services including weddings, pre-wedding shoots, portraits, products, business and events. The exact scope, number of edited photos, duration, location and delivery time are agreed with you on WhatsApp before booking.</p>
+
+    <h3>2. Eligibility</h3>
+    <p>You must be at least 18 years old to book our services. Bookings for minors must be made by a parent or guardian.</p>
+
+    <h3>3. Pricing and payments</h3>
+    <ul>
+      <li>The full price of your package is communicated before you confirm. We do not charge hidden fees.</li>
+      <li>A booking is confirmed once the agreed advance payment is received.</li>
+      <li>The remaining balance is payable as agreed with you, before or on delivery of final files.</li>
+      <li>Travel, accommodation or other extra costs, if any, will be told to you in advance.</li>
+    </ul>
+
+    <h3>3A. 12% discount offer</h3>
+    <ul>
+      <li>A 12% discount is available on the package price when you request the offer on WhatsApp and confirm your booking.</li>
+      <li>The discount applies to the package price only and cannot be exchanged for cash.</li>
+      <li>We may change or withdraw the offer in future, but any booking already confirmed at a discounted price will be honoured.</li>
+    </ul>
+
+    <h3 id="terms-refund">4. Cancellation, rescheduling and refund policy</h3>
+    <ul>
+      <li>You may reschedule your shoot once, subject to our availability, with at least 7 days' notice.</li>
+      <li>If you cancel at least 7 days before the shoot date, your advance is refunded after deducting any actual costs already incurred.</li>
+      <li>If you cancel less than 7 days before the shoot, the advance may be non-refundable because the date was reserved for you.</li>
+      <li>If we have to cancel for any reason, you will get a full refund or a new date of your choice.</li>
+      <li>Once final edited photographs have been delivered, fees are non-refundable. If you have a concern about the quality of work, contact us within 7 days of delivery and we will review it fairly.</li>
+      <li>Approved refunds are returned to the original payment method within a reasonable time.</li>
+    </ul>
+
+    <h3>5. Delivery</h3>
+    <p>Delivery time is agreed at booking. Delays caused by weather, events beyond our control or late information from you may extend this time; we will keep you informed.</p>
+
+    <h3>6. Copyright and usage</h3>
+    <ul>
+      <li>Raja Photo Studio retains the copyright in all photographs.</li>
+      <li>You receive a licence to use delivered photographs for personal use, including sharing on social media with credit where possible.</li>
+      <li>Commercial use (for example advertising or resale) needs a written agreement unless it was part of your package, such as product shoots for your own business.</li>
+      <li>We will not use identifiable photos of you in our portfolio or marketing without your permission.</li>
+    </ul>
+
+    <h3>7. Your responsibilities</h3>
+    <ul>
+      <li>Give accurate booking details and be available at the agreed time and place.</li>
+      <li>Arrange permissions or entry to venues where required.</li>
+      <li>Treat our team respectfully. We may stop a shoot if the safety of our team or equipment is at risk.</li>
+    </ul>
+
+    <h3>8. Limitation of liability</h3>
+    <p>We take reasonable care to protect your files and equipment, but in the rare case of loss of files due to unforeseen technical failure, our liability is limited to the amount you paid for the affected service. We are not liable for indirect or consequential losses.</p>
+
+    <h3>9. Customer support</h3>
+    <p>Our WhatsApp support is open 24/7. Response times may vary with volume, and we aim to reply as quickly as possible.</p>
+
+    <h3>10. Third-party services</h3>
+    <p>WhatsApp and other third-party platforms operate under their own terms. We are not responsible for their services or policies.</p>
+
+    <h3>11. Governing law</h3>
+    <p>These terms are governed by the laws of India. Any dispute will be subject to the courts of [Your City, State].</p>
+
+    <h3>12. Changes</h3>
+    <p>We may update these terms from time to time. Continued use of our services means you accept the updated terms.</p>
+
+    <h3>13. Contact us</h3>
+    <p>Raja Photo Studio<br>[Your business address, City, State, PIN]<br>Email: support@yourdomain.com<br>WhatsApp: +91 92863 53220</p>
+    <p>Also read our <a href="#privacy">Privacy Policy</a>.</p>
+    <a class="back" href="#top">&larr; Back to home</a>
+  </div>
+</section>
+
+<script>
+(function(){
+  var ns='http://www.w3.org/2000/svg';
+
+  // Aperture blades
+  try{
+    var b=document.getElementById('blades');
+    for(var i=0;i<6;i++){
+      var p=document.createElementNS(ns,'polygon');
+      p.setAttribute('points','200,52 322,122 244,176 200,150');
+      p.setAttribute('fill', i%2? '#2A2F3D':'#353B4D');
+      p.setAttribute('stroke','#12141A');
+      p.setAttribute('stroke-width','1.5');
+      p.setAttribute('transform','rotate('+(i*60)+' 200 200)');
+      b.appendChild(p);
+    }
+  }catch(e){}
+
+  // f-stop ticks on outer ring
+  try{
+    var t=document.getElementById('ticks'),f=['1.4','2','2.8','4','5.6','8','11','16'];
+    for(var i=0;i<48;i++){
+      var a=i*7.5*Math.PI/180,long=i%6===0,r1=long?170:176;
+      var l=document.createElementNS(ns,'line');
+      l.setAttribute('x1',200+r1*Math.cos(a));l.setAttribute('y1',200+r1*Math.sin(a));
+      l.setAttribute('x2',200+186*Math.cos(a));l.setAttribute('y2',200+186*Math.sin(a));
+      l.setAttribute('stroke','#FFC93C');l.setAttribute('stroke-width',long?2.5:1.2);
+      t.appendChild(l);
+    }
+  }catch(e){}
+
+  // hide floating button while full-screen banner is visible
+  try{
+    var fab=document.querySelector('.fab'),bn=document.getElementById('topBanner');
+    function chk(){fab.classList.toggle('hide',window.scrollY<bn.offsetHeight-80)}
+    chk();window.addEventListener('scroll',chk,{passive:true});
+  }catch(e){}
+
+  try{
+    var n=document.getElementById('n12');
+    if(n&&'IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+      n.textContent='0%';
+      var io=new IntersectionObserver(function(e){
+        if(!e[0].isIntersecting)return;io.disconnect();var st=null;
+        (function step(t){if(!st)st=t;var p=Math.min((t-st)/1100,1);n.textContent=Math.round(12*p)+'%';if(p<1)requestAnimationFrame(step)})(performance.now());
+      },{threshold:.4});io.observe(n);
+    }
+  }catch(e){}
+
+  var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();
+
+  // if banner image already failed before script ran
+  var img=document.querySelector('#topBanner img');
+  if(img && img.complete && img.naturalWidth===0){document.getElementById('topBanner').classList.add('no-img');img.style.display='none';}
+})();
+</script>
 </body>
 </html>
